@@ -3,25 +3,28 @@ using System.Collections.Generic;
 using Unity.Entities;
 using UnityEngine;
 
-public class RotateSpeedAuthoring : MonoBehaviour
+namespace Dots
 {
-    public float value;
-
-    private class Baker : Baker<RotateSpeedAuthoring>
+    public class RotateSpeedAuthoring : MonoBehaviour
     {
-        public override void Bake(RotateSpeedAuthoring authoring)
+        public float value;
+
+        private class Baker : Baker<RotateSpeedAuthoring>
         {
-            Entity entity = GetEntity(TransformUsageFlags.Dynamic);
-            
-            AddComponent(entity, new RotateSpeed()
+            public override void Bake(RotateSpeedAuthoring authoring)
             {
-                value = authoring.value
-            });
+                Entity entity = GetEntity(TransformUsageFlags.Dynamic);
+
+                AddComponent(entity, new RotateSpeed()
+                {
+                    value = authoring.value
+                });
+            }
         }
     }
-}
 
-public struct RotateSpeed : IComponentData
-{
-    public float value;
+    public struct RotateSpeed : IComponentData
+    {
+        public float value;
+    }
 }
