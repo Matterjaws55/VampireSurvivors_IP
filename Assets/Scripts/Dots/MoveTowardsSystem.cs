@@ -13,13 +13,19 @@ namespace Dots
         [BurstCompile]
         public void OnCreate(ref SystemState state)
         {
-            
+            state.RequireForUpdate<PlayerTag>(); 
         }
 
         [BurstCompile]
         public void OnUpdate(ref SystemState state)
         {
             float3 playerPos = float3.zero;
+            
+            foreach (var transform in SystemAPI.Query<RefRO<LocalTransform>>().WithAll<PlayerTag>())
+            {
+                playerPos = transform.ValueRO.Position;
+                break; // Only take the first player entity found
+            }
             
             foreach (RefRW<TargetPosition> targetPosition in SystemAPI.Query<RefRW<TargetPosition>>())
             {
