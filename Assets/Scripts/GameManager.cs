@@ -9,6 +9,8 @@ public class GameManager : MonoBehaviour
     public Image healthBar;
     public float healthAmount = 100f;
 
+    public GameObject player;
+
     private void Start()
     {
         
