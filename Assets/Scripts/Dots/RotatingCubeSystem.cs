@@ -1,10 +1,12 @@
-﻿using Unity.Entities;
+﻿using Unity.Burst;
+using Unity.Entities;
 using Unity.Transforms;
 
 namespace Dots
 {
     public partial struct RotatingCubeSystem : ISystem
     {
+        [BurstCompile]
         public void OnUpdate(ref SystemState state)
         {
             
