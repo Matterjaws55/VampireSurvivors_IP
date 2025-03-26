@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.EventSystems;
 
 public class GameManager : MonoBehaviour
 {
@@ -11,6 +12,13 @@ public class GameManager : MonoBehaviour
 
     public GameObject player;
 
+    private bool isPaused;
+
+    [Header("UI & Menu Parents")]
+    public GameObject healthCanvas;
+    public GameObject pauseParent;
+    public GameObject scoreParent;
+
     private void Start()
     {
         
@@ -18,7 +26,14 @@ public class GameManager : MonoBehaviour
 
     private void Update()
     {
-        
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            isPaused = !isPaused;
+            if (isPaused)
+                PauseGame();
+            else
+                UnPauseGame();
+        }
     }
 
     public void TakeDamage(float damage)
@@ -32,5 +47,33 @@ public class GameManager : MonoBehaviour
         healthAmount += healingAmount;
         healthAmount = Mathf.Clamp(healthAmount, 0, 100);
         healthBar.fillAmount = healthAmount / 100f;
+    }
+
+    public void PauseGame()
+    {
+        isPaused = true;
+        HideUI();
+        pauseParent.SetActive(true);
+        Time.timeScale = 0;
+    }
+
+    public void UnPauseGame()
+    {
+        isPaused = false;
+        pauseParent.SetActive(false);
+        UnHideUI();
+        Time.timeScale = 1;
+    }
+
+    public void HideUI()
+    {
+        scoreParent.SetActive(false);
+        healthCanvas.SetActive(false);
+    }
+
+    public void UnHideUI()
+    {
+        scoreParent.SetActive(true);
+        healthCanvas.SetActive(true);
     }
 }
