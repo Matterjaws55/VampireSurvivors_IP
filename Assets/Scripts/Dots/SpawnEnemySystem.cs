@@ -24,7 +24,7 @@ namespace Dots
                 
                 EntityManager.SetComponentData(enemyEntity, new LocalTransform()
                 {
-                    Position = new float3(UnityEngine.Random.Range(-50f, 50f), 0, UnityEngine.Random.Range(-50f, 50f)),
+                    Position = new float3(UnityEngine.Random.Range(-300f, 300f), 0, UnityEngine.Random.Range(-300f, 300f)),
                     Rotation = Quaternion.identity,
                     Scale = 1f,
                 });
