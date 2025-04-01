@@ -18,6 +18,14 @@ public class PlayerCollider : MonoBehaviour
     {
         if(other.gameObject.tag == "Enemy")
         {
+            gameManager.TakeDamage(20);
+        }
+        if (other.gameObject.tag == "SlowEnemy")
+        {
+            gameManager.TakeDamage(30);
+        }
+        if (other.gameObject.tag == "FastEnemy")
+        {
             gameManager.TakeDamage(10);
         }
     }

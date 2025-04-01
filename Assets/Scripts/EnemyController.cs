@@ -13,6 +13,17 @@ public class EnemyController : MonoBehaviour
 
     void Update()
     {
-        transform.position = Vector3.MoveTowards(this.transform.position, player.position, 2.5f * Time.deltaTime);
+        if (this.gameObject.tag == "Enemy")
+        {
+            transform.position = Vector3.MoveTowards(this.transform.position, player.position, 2.5f * Time.deltaTime);
+        }
+        else if (this.gameObject.tag == "SlowEnemy")
+        {
+            transform.position = Vector3.MoveTowards(this.transform.position, player.position, 1f * Time.deltaTime);
+        }
+        else if (this.gameObject.tag == "FastEnemy")
+        {
+            transform.position = Vector3.MoveTowards(this.transform.position, player.position, 4f * Time.deltaTime);
+        }
     }
 }
