@@ -33,7 +33,8 @@ public class PlayerTopDownMovement : MonoBehaviour
             if(Physics.Raycast(Camera.main.ScreenPointToRay(Input.mousePosition), out hit, 100, clickableLayers))
             {
                 agent.destination = hit.point;
-                Instantiate(clickEffect, hit.point += new Vector3(0, 0.1f, 0), clickEffect.transform.rotation);
+                ParticleSystem effect = Instantiate(clickEffect, hit.point += new Vector3(0, 0.1f, 0), clickEffect.transform.rotation) as ParticleSystem;
+                Destroy(effect, 3);
             }
         }
     }
