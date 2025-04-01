@@ -1,10 +1,9 @@
-﻿using System;
-using System.Numerics;
+﻿using Dots.Components;
+using Dots.Player.Components;
 using Unity.Burst;
 using Unity.Entities;
 using Unity.Mathematics;
 using Unity.Transforms;
-using Unity.VisualScripting;
 
 namespace Dots
 {

@@ -266,9 +266,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8901649705967633914}
-  - component: {fileID: 6166757817817240742}
-  - component: {fileID: 5296066242659803760}
   - component: {fileID: 7819507530851625145}
+  - component: {fileID: 3973115199167213039}
+  - component: {fileID: 5362975251531689247}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -293,46 +293,6 @@ Transform:
   - {fileID: 1702807654964249110}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!195 &6166757817817240742
-NavMeshAgent:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5779060088038066251}
-  m_Enabled: 1
-  m_AgentTypeID: 0
-  m_Radius: 0.5
-  m_Speed: 3.5
-  m_Acceleration: 9999
-  avoidancePriority: 50
-  m_AngularSpeed: 120
-  m_StoppingDistance: 0
-  m_AutoTraverseOffMeshLink: 1
-  m_AutoBraking: 0
-  m_AutoRepath: 1
-  m_Height: 2
-  m_BaseOffset: 0
-  m_WalkableMask: 4294967295
-  m_ObstacleAvoidanceType: 4
---- !u!114 &5296066242659803760
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5779060088038066251}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4a7702dd479e97f48878204398f98e20, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  clickEffect: {fileID: 3420512114370355654, guid: 4f3ebcf9bdd96aa48898bd5d52d21a1c,
-    type: 3}
-  clickableLayers:
-    serializedVersion: 2
-    m_Bits: 8
-  rotationSpeed: 8
 --- !u!114 &7819507530851625145
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -352,6 +312,63 @@ MonoBehaviour:
     type: 3}
   spawnRadius: 5
   upgradeSpawnRadius: 10
+--- !u!114 &3973115199167213039
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5779060088038066251}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62899f850307741f2a39c98a8b639597, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Actions: {fileID: -944628639613478452, guid: c5f67a1963948364d831d6f994d59962,
+    type: 3}
+  m_NotificationBehavior: 0
+  m_UIInputModule: {fileID: 0}
+  m_DeviceLostEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_DeviceRegainedEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_ControlsChangedEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_ActionEvents: []
+  m_NeverAutoSwitchControlSchemes: 0
+  m_DefaultControlScheme: 
+  m_DefaultActionMap: Top Down
+  m_SplitScreenIndex: -1
+  m_Camera: {fileID: 0}
+--- !u!143 &5362975251531689247
+CharacterController:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5779060088038066251}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Height: 2
+  m_Radius: 0.5
+  m_SlopeLimit: 45
+  m_StepOffset: 0.3
+  m_SkinWidth: 0.08
+  m_MinMoveDistance: 0.001
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &6801945522170066775
 GameObject:
   m_ObjectHideFlags: 0

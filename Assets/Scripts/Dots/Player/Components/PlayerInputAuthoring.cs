@@ -1,9 +1,10 @@
-﻿using Unity.Entities;
+using Unity.Entities;
+using Unity.Mathematics;
 using UnityEngine;
 
-namespace Dots
+namespace Dots.Player.Components
 {
-    public class PlayerTagAuthoring : MonoBehaviour
+    public class PlayerInputAuthoring : MonoBehaviour
     {
         private static Entity GetEntity(TransformUsageFlags dynamic)
         {
@@ -15,13 +16,13 @@ namespace Dots
             public override void Bake(PlayerTagAuthoring authoring)
             {
                 Entity entity = GetEntity(TransformUsageFlags.Dynamic);
-                AddComponent(entity, new PlayerTag());
-            }        
+                AddComponent(entity, new PlayerInput());
+            }
         }
     }
-    
-    public struct PlayerTag : IComponentData
+
+    public struct PlayerInput : IComponentData
     {
-        
+        public float2 MoveInput;
     }
 }
