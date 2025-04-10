@@ -14,4 +14,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/EnemyTestScene.unity
     guid: cff98044a0ca08e418d3b72945c3d9ce
+  - enabled: 1
+    path: Assets/Scenes/GameOver.unity
+    guid: c3f84bb20455b0d48a8f43b6a2cd6d1a
   m_configObjects: {}

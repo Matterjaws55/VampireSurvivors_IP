@@ -1155,6 +1155,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gameManager: {fileID: 1583609182}
+  enemyDamage: 50
 --- !u!1 &832575517
 GameObject:
   m_ObjectHideFlags: 0
