@@ -5,11 +5,6 @@ namespace Dots.Player.Components
 {
     public class PlayerTagAuthoring : MonoBehaviour
     {
-        private static Entity GetEntity(TransformUsageFlags dynamic)
-        {
-            throw new System.NotImplementedException();
-        }
-
         private class Baker : Baker<PlayerTagAuthoring>
         {
             public override void Bake(PlayerTagAuthoring authoring)

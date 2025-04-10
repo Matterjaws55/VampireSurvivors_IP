@@ -8,6 +8,7 @@ using UnityEngine.InputSystem.Composites;
 
 namespace Dots.Player.Systems
 {
+	[BurstCompile]
 	public partial class PlayerInputSystem : SystemBase
 	{
 		private PlayerInputMaps _controls;
