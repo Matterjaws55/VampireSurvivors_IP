@@ -60,6 +60,16 @@ public class SphereWeapon : MonoBehaviour
         {
             Destroy(other.gameObject);
         }
+
+        if (other.CompareTag("SlowEnemy"))
+        {
+            Destroy(other.gameObject);
+        }
+
+        if (other.CompareTag("FastEnemy"))
+        {
+            Destroy(other.gameObject);
+        }
     }
 
     public void UpgradeWeapon()
