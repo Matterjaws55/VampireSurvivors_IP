@@ -14,15 +14,16 @@ namespace Dots
             public override void Bake(SpawnEnemyConfigAuthoring authoring)
             {
                 Entity entity = GetEntity(TransformUsageFlags.None);
+                Entity enemyPrefabEntity = GetEntity(authoring._enemyPrefab, TransformUsageFlags.Dynamic);
+
                 
-                Entity cubePrefabEntity = GetEntity(authoring._enemyPrefab, TransformUsageFlags.Dynamic);
-                
-                AddComponent(entity, new SpawnEnemyConfig()
+                AddComponent(entity, new SpawnEnemyConfig
                 {
-                    EnemyPrefabEntity = cubePrefabEntity,
-                    AmountToSpawn = authoring._amountToSpawn,
+                    EnemyPrefabEntity = enemyPrefabEntity,
+                    AmountToSpawn = authoring._amountToSpawn
                 });
             }
+            
         }
     }
     
