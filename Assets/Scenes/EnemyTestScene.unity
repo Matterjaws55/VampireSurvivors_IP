@@ -2522,7 +2522,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   healthBar: {fileID: 895114008}
-  healthAmount: 100
+  currentHealth: 100
   player: {fileID: 1900954667}
   pauseParent: {fileID: 260032236}
   healthCanvas: {fileID: 1228764490}
