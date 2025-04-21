@@ -2822,6 +2822,52 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   numberOfBush: 200
+--- !u!1 &1777317406
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1777317408}
+  - component: {fileID: 1777317407}
+  m_Layer: 0
+  m_Name: PoolManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1777317407
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1777317406}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2a53c90f980303c47963f200def6a92a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  prefab: {fileID: 2545725804351217366, guid: e446cbb50c77bd249a71346aa5c1cb67, type: 3}
+  poolSize: 5
+--- !u!4 &1777317408
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1777317406}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -4.037028, y: 1.4400367, z: 13.882804}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1782721628
 GameObject:
   m_ObjectHideFlags: 0
@@ -3073,6 +3119,19 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 5611637695476119487}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1900954678
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1900954667}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a11f9aec02e56df40aa6a26ca2a39b79, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pooler: {fileID: 1777317407}
 --- !u!1 &2086033592
 GameObject:
   m_ObjectHideFlags: 0
@@ -3219,7 +3278,11 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 7818195691255526671, guid: 3df7450101349a84085d026586630422,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1900954678}
   m_SourcePrefab: {fileID: 100100000, guid: 3df7450101349a84085d026586630422, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
@@ -3239,3 +3302,4 @@ SceneRoots:
   - {fileID: 907933980}
   - {fileID: 5611637695476119487}
   - {fileID: 981710856}
+  - {fileID: 1777317408}
