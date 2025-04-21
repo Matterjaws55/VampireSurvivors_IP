@@ -19,6 +19,7 @@ public class GameManager : MonoBehaviour
     public GameObject pauseParent;
     private bool isPaused;
     public GameObject healthCanvas;
+    
 
     private void Start()
     {
@@ -131,8 +132,5 @@ public class GameManager : MonoBehaviour
         Application.Quit();
     }
 
-    public void PlayGame()
-    {
-        LoadLvl(1);
-    }
+    
 }
