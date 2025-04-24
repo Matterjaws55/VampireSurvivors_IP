@@ -23,7 +23,7 @@ namespace Dots.Components
 
     public struct Health : IComponentData
     {
-        public int Value;
+        public int Value; 
     }
 
 }
