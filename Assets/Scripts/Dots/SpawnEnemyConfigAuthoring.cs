@@ -8,7 +8,8 @@ namespace Dots
     {
         [FormerlySerializedAs("_cubePrefab")] public GameObject _enemyPrefab;
         public int _amountToSpawn;
-        
+        public float _sizeX = 100;
+        public float _sizeZ = 100;
         private class SpawnEnemyConfigAuthoringBaker : Baker<SpawnEnemyConfigAuthoring>
         {
             public override void Bake(SpawnEnemyConfigAuthoring authoring)
@@ -20,7 +21,9 @@ namespace Dots
                 AddComponent(entity, new SpawnEnemyConfig
                 {
                     EnemyPrefabEntity = enemyPrefabEntity,
-                    AmountToSpawn = authoring._amountToSpawn
+                    AmountToSpawn = authoring._amountToSpawn,
+                    SizeX = authoring._sizeX,
+                    SizeZ = authoring._sizeZ
                 });
             }
             
@@ -31,5 +34,7 @@ namespace Dots
     {
         public Entity EnemyPrefabEntity;
         public int AmountToSpawn;
+        public float SizeX;
+        public float SizeZ;
     }
 }

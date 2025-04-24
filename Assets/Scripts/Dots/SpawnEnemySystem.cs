@@ -29,8 +29,8 @@ namespace Dots
             {
                 Entity enemyEntity = EntityManager.Instantiate(enemySpawnConfig.EnemyPrefabEntity);
 
-                Vector3 pos = new Vector3(UnityEngine.Random.Range(-300f, 300f), 0,
-                    UnityEngine.Random.Range(-300f, 300f));
+                Vector3 pos = new Vector3(UnityEngine.Random.Range(-enemySpawnConfig.SizeX,enemySpawnConfig.SizeX), 0,
+                    UnityEngine.Random.Range(-enemySpawnConfig.SizeZ,enemySpawnConfig.SizeZ));
                 EntityManager.SetComponentData(enemyEntity, new LocalTransform()
                 {
                     Position =pos,
