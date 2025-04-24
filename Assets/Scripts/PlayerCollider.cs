@@ -8,7 +8,7 @@ public class PlayerCollider : MonoBehaviour
 
     private void Update()
     {
-        if(gameManager.healthAmount <= 0)
+        if(gameManager.currentHealth <= 0)
         {
             Destroy(gameObject);
         }
