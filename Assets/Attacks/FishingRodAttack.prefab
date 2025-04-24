@@ -107,7 +107,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _damage: 10
-  _radius: 3
+  _radius: 2
 --- !u!114 &5923157128208220926
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -273,7 +273,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _damage: 10
-  _radius: 3
+  _radius: 2
 --- !u!114 &8897831511590880941
 MonoBehaviour:
   m_ObjectHideFlags: 0

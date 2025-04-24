@@ -6,6 +6,7 @@ namespace Dots.Components
     public class HealthAuthoring : MonoBehaviour
     {
         public int Health = 10;
+        public int ScoreOnDeath = 100;
 
         private class HealthBaker : Baker<HealthAuthoring>
         {
@@ -16,6 +17,7 @@ namespace Dots.Components
                 AddComponent(entity, new Health()
                 {
                     Value = authoring.Health,
+                    ScoreOnDeath = authoring.ScoreOnDeath
                 });
             }
         }
@@ -23,7 +25,8 @@ namespace Dots.Components
 
     public struct Health : IComponentData
     {
-        public int Value; 
+        public int Value;
+        public int ScoreOnDeath;
     }
 
 }

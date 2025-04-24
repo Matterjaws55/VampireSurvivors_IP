@@ -18,7 +18,10 @@ namespace Dots.Attacks.Systems
             [ReadOnly] public ComponentLookup<LocalTransform> TransformLookup;
             [ReadOnly] public ComponentLookup<Health> HealthLookup;
             [ReadOnly] public NativeArray<Entity> Enemies;
+            public Entity ScoreEntity;
+            [ReadOnly] public ComponentLookup<Score> ScoreLookup; // Added [ReadOnly]
 
+            // Since we can't write directly to ScoreLookup, we'll use ECB to update the score
             void Execute(
                 RefRO<LocalTransform> projectileTransform,
                 RefRO<Projectile> projectile,
@@ -43,26 +46,30 @@ namespace Dots.Attacks.Systems
                         var newHealth = health;
                         newHealth.Value -= (int)projectile.ValueRO.Damage;
                         ECB.SetComponent(sortKey, enemyEntity, newHealth);
+
                         if (newHealth.Value <= 0)
                         {
+                            var currentScore = ScoreLookup[ScoreEntity];
+                            var newScore = new Score { Value = currentScore.Value + health.ScoreOnDeath };
+                            ECB.SetComponent(sortKey, ScoreEntity, newScore);
+
                             ECB.AddComponent(sortKey, enemyEntity, new DeathAnimation() { Duration = 2f });
                             ECB.RemoveComponent<MoveSpeed>(sortKey, enemyEntity);
                             ECB.RemoveComponent<Health>(sortKey, enemyEntity);
-
                         }
-                        
-                
+
                         damagedEntities.Entities.Add(enemyEntity);
                     }
                 }
             }
         }
-
+        
         [BurstCompile]
         public void OnCreate(ref SystemState state)
         {
             state.RequireForUpdate<BeginSimulationEntityCommandBufferSystem.Singleton>();
         }
+
 
         [BurstCompile]
         public void OnUpdate(ref SystemState state)
@@ -71,11 +78,21 @@ namespace Dots.Attacks.Systems
             var enemyQuery = SystemAPI.QueryBuilder().WithAll<Health, LocalTransform>().Build();
             var enemies = enemyQuery.ToEntityArray(Allocator.TempJob);
 
+            // Get or create score entity
+            Entity scoreEntity;
+            if (!SystemAPI.TryGetSingletonEntity<Score>(out scoreEntity))
+            {
+                scoreEntity = state.EntityManager.CreateEntity();
+                state.EntityManager.AddComponentData(scoreEntity, new Score { Value = 0 });
+            }
+
             var job = new DamageJob
             {
                 ECB = ecb.AsParallelWriter(),
                 TransformLookup = state.GetComponentLookup<LocalTransform>(true),
                 HealthLookup = state.GetComponentLookup<Health>(true),
+                ScoreLookup = state.GetComponentLookup<Score>(),
+                ScoreEntity = scoreEntity,
                 Enemies = enemies
             };
 
@@ -83,7 +100,6 @@ namespace Dots.Attacks.Systems
             state.Dependency.Complete();
             enemies.Dispose();
         }
-        
-        
     }
+    
 }
