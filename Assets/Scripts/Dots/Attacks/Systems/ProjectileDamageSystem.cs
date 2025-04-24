@@ -1,5 +1,6 @@
 ﻿using Dots.Attacks.Components;
 using Dots.Components;
+using Dots.Enemy.Components;
 using Unity.Burst;
 using Unity.Collections;
 using Unity.Entities;
@@ -41,6 +42,13 @@ namespace Dots.Attacks.Systems
                         var newHealth = health;
                         newHealth.Value -= (int)projectile.ValueRO.Damage;
                         ECB.SetComponent(sortKey, enemyEntity, newHealth);
+                        if (newHealth.Value <= 0)
+                        {
+                            ECB.AddComponent(sortKey, enemyEntity, new DeathAnimation() { Duration = 1f });
+                            ECB.RemoveComponent<MoveSpeed>(sortKey, enemyEntity);
+                        }
+                        
+                
                         damagedEntities.Entities.Add(enemyEntity);
                     }
                 }

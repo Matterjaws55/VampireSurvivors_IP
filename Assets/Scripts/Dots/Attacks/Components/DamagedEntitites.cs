@@ -5,6 +5,6 @@ namespace Dots.Attacks.Components
 {
     public struct DamagedEntitites : IComponentData
     {
-         public FixedList512Bytes<Entity> Entities;
+         public FixedList4096Bytes<Entity> Entities;
     }
 }
