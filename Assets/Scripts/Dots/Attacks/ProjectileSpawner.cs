@@ -55,10 +55,10 @@ namespace Dots.Attacks
 
         private void OnDestroy()
         {
-            if (_entityManager != null && _entityManager.Exists(_spawnedEntity))
+           /* if (_entityManager != null && _entityManager.Exists(_spawnedEntity))
             {
                 _entityManager.DestroyEntity(_spawnedEntity);
-            }
+            }*/
         }
     }
 }

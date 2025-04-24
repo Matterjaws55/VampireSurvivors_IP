@@ -30,6 +30,7 @@ namespace Dots.Attacks.Systems
 
                 foreach (var enemyEntity in Enemies)
                 {
+                    if (damagedEntities.Entities.Length >= 511) break;
                     if (damagedEntities.Entities.Contains(enemyEntity))
                         continue;
 
