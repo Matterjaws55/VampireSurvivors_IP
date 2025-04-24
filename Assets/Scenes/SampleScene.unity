@@ -1531,6 +1531,8 @@ MonoBehaviour:
   healthBar: {fileID: 895114008}
   currentHealth: 100
   player: {fileID: 0}
+  pauseParent: {fileID: 0}
+  healthCanvas: {fileID: 0}
 --- !u!4 &1583609183
 Transform:
   m_ObjectHideFlags: 0
