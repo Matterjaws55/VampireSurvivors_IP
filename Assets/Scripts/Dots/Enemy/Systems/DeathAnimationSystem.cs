@@ -1,6 +1,8 @@
 ﻿using Dots.Enemy.Components;
 using Unity.Burst;
 using Unity.Entities;
+using Unity.Mathematics;
+using Unity.Transforms;
 
 namespace Dots.Enemy.Systems
 {
@@ -22,10 +24,23 @@ namespace Dots.Enemy.Systems
         
             var deltaTime = SystemAPI.Time.DeltaTime;
 
-            foreach (var (animation, entity) in SystemAPI.Query<RefRW<DeathAnimation>>().WithEntityAccess())
+            foreach (var (transform, animation, entity) in SystemAPI.Query<RefRW<LocalTransform>, RefRW<DeathAnimation>>().WithEntityAccess())
             {
                 animation.ValueRW.ElapsedTime += deltaTime;
-            
+                
+                float t = animation.ValueRW.ElapsedTime / animation.ValueRO.Duration;
+                
+                transform.ValueRW.Scale = math.lerp(1f, 0f, t); // Scale down to 0
+                
+                // Float upward
+                transform.ValueRW.Position.y += 0.5f * deltaTime;
+
+                // Slowly rotate
+                transform.ValueRW.Rotation = math.mul(
+                    transform.ValueRW.Rotation,
+                    quaternion.Euler(0, 0, 1f * deltaTime) // z-axis spin
+                );
+                
                 if (animation.ValueRW.ElapsedTime >= animation.ValueRO.Duration)
                 {
                     ecb.DestroyEntity(entity);

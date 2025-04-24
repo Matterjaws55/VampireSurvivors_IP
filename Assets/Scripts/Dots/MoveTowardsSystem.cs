@@ -44,6 +44,8 @@ namespace Dots
                 float3 movement = dir * speed * deltaTime;
                 
                 localTransform.ValueRW.Position = curPos + movement;
+
+                localTransform.ValueRW.Rotation = quaternion.LookRotationSafe(dir, math.up());
             }
         }
 
