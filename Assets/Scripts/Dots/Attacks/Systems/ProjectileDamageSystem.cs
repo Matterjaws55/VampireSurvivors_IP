@@ -54,8 +54,8 @@ namespace Dots.Attacks.Systems
                             ECB.SetComponent(sortKey, ScoreEntity, newScore);
 
                             ECB.AddComponent(sortKey, enemyEntity, new DeathAnimation() { Duration = 1f });
-                            ECB.RemoveComponent<MoveSpeed>(sortKey, enemyEntity);
-                            ECB.RemoveComponent<Health>(sortKey, enemyEntity);
+                            //ECB.RemoveComponent<MoveSpeed>(sortKey, enemyEntity);
+                            //ECB.RemoveComponent<Health>(sortKey, enemyEntity);
                         }
 
                         damagedEntities.Entities.Add(enemyEntity);
