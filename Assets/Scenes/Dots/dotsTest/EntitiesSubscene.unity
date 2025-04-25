@@ -237,7 +237,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 377164227}
-  - component: {fileID: 377164226}
+  - component: {fileID: 377164228}
   m_Layer: 0
   m_Name: EnemySpawner
   m_TagString: Untagged
@@ -245,23 +245,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &377164226
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 377164225}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5ce7113f12f34f7c857ee06465383f90, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _enemyPrefab: {fileID: 4094521209202891302, guid: fdec1da815c57b0458f0f3afca1dad79,
-    type: 3}
-  _amountToSpawn: 1000
-  _sizeX: 200
-  _sizeZ: 200
 --- !u!4 &377164227
 Transform:
   m_ObjectHideFlags: 0
@@ -277,6 +260,23 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &377164228
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 377164225}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5ce7113f12f34f7c857ee06465383f90, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _enemyPrefab: {fileID: 4094521209202891302, guid: fdec1da815c57b0458f0f3afca1dad79,
+    type: 3}
+  _amountToSpawn: 10000
+  _sizeX: 200
+  _sizeZ: 200
 --- !u!1 &937678696
 GameObject:
   m_ObjectHideFlags: 0
