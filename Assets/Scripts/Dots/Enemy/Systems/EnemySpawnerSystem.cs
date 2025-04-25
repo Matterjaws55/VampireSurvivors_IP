@@ -22,16 +22,17 @@ namespace Dots.Enemy.Systems
             var deltaTime = SystemAPI.Time.DeltaTime;
 
             foreach (var (spawner, tiers) in
-                     SystemAPI.Query<RefRW<EnemySpawnerComponent>, RefRO<EnemyTiersComponent>>())
+                     SystemAPI.Query<RefRW<EnemySpawnerComponent>, RefRO<EnemyTier>>())
             {
                 spawner.ValueRW.GameTime += deltaTime;
 
                 if (spawner.ValueRO.GameTime < spawner.ValueRO.NextSpawnTime)
                     continue;
 
-                var currentTier = GetCurrentTier(spawner.ValueRO.GameTime, tiers.ValueRO.Tiers);
+                var currentTier = tiers.ValueRO;
                 if (!EntityManager.Exists(currentTier.PrefabEntity)) continue;
                 if (!EntityManager.Exists(spawner.ValueRO.PlayerEntity)) continue;
+                if(spawner.ValueRO.GameTime < currentTier.TimeToUnlock) continue;
 
                 var playerTransform = SystemAPI.GetComponent<LocalTransform>(spawner.ValueRO.PlayerEntity);
                 int spawnCount = math.clamp((int)(spawner.ValueRO.GameTime / 60f) + 1, 1, 8);
@@ -41,7 +42,7 @@ namespace Dots.Enemy.Systems
                     float angle = UnityEngine.Random.Range(0, math.PI * 2);
                     float3 spawnPos = new float3(
                         playerTransform.Position.x + math.cos(angle) * currentTier.SpawnRadius,
-                        playerTransform.Position.y,
+                        0,
                         playerTransform.Position.z + math.sin(angle) * currentTier.SpawnRadius
                     );
 
@@ -57,18 +58,6 @@ namespace Dots.Enemy.Systems
             }
 
             _beginSimEcbSystem.AddJobHandleForProducer(Dependency);
-        }
-
-        private static EnemyTier GetCurrentTier(float gameTime, FixedList128Bytes<EnemyTier> tiers)
-        {
-            for (int i = tiers.Length - 1; i >= 0; i--)
-            {
-                if (gameTime >= tiers[i].TimeToUnlock)
-                {
-                    return tiers[i];
-                }
-            }
-            return tiers[0];
         }
     }
 }
