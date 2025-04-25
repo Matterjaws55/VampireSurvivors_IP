@@ -53,7 +53,7 @@ namespace Dots.Attacks.Systems
                             var newScore = new Score { Value = currentScore.Value + health.ScoreOnDeath };
                             ECB.SetComponent(sortKey, ScoreEntity, newScore);
 
-                            ECB.AddComponent(sortKey, enemyEntity, new DeathAnimation() { Duration = 2f });
+                            ECB.AddComponent(sortKey, enemyEntity, new DeathAnimation() { Duration = 1f });
                             ECB.RemoveComponent<MoveSpeed>(sortKey, enemyEntity);
                             ECB.RemoveComponent<Health>(sortKey, enemyEntity);
                         }
@@ -64,19 +64,24 @@ namespace Dots.Attacks.Systems
             }
         }
         
+        EntityQuery _enemyQuery;
+        
         [BurstCompile]
         public void OnCreate(ref SystemState state)
         {
-            state.RequireForUpdate<BeginSimulationEntityCommandBufferSystem.Singleton>();
+            state.RequireForUpdate<BeginSimulationEntityCommandBufferSystem.Singleton>();            
+            _enemyQuery = SystemAPI.QueryBuilder().WithAll<Health, LocalTransform>().Build();
         }
+
+
 
 
         [BurstCompile]
         public void OnUpdate(ref SystemState state)
         {
             var ecb = SystemAPI.GetSingleton<BeginSimulationEntityCommandBufferSystem.Singleton>().CreateCommandBuffer(state.WorldUnmanaged);
-            var enemyQuery = SystemAPI.QueryBuilder().WithAll<Health, LocalTransform>().Build();
-            var enemies = enemyQuery.ToEntityArray(Allocator.TempJob);
+            
+            var enemies = _enemyQuery.ToEntityArray(Allocator.TempJob);
 
             // Get or create score entity
             Entity scoreEntity;
