@@ -473,6 +473,8 @@ MonoBehaviour:
   _activeAttacks:
   - TimeSinceLastAttack: 0
     AttackStats: {fileID: 11400000, guid: c7243f85e2e0dbb45a9e8fdd93bb40ad, type: 2}
+  - TimeSinceLastAttack: 0
+    AttackStats: {fileID: 11400000, guid: 03568c334e3890546baa35ae11f87095, type: 2}
 --- !u!1 &758109546
 GameObject:
   m_ObjectHideFlags: 3
