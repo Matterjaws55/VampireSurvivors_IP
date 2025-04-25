@@ -33,12 +33,12 @@ namespace Dots.Enemy.Systems
                 transform.ValueRW.Scale = math.lerp(1f, 0f, t); // Scale down to 0
                 
                 // Float upward
-                transform.ValueRW.Position.y += 0.5f * deltaTime;
+                transform.ValueRW.Position.y += 20.5f * deltaTime;
 
                 // Slowly rotate
                 transform.ValueRW.Rotation = math.mul(
                     transform.ValueRW.Rotation,
-                    quaternion.Euler(0, 0, 1f * deltaTime) // z-axis spin
+                    quaternion.Euler(0, 0, 4f * deltaTime) // z-axis spin
                 );
                 
                 if (animation.ValueRW.ElapsedTime >= animation.ValueRO.Duration)
