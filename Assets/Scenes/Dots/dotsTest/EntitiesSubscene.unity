@@ -133,7 +133,7 @@ GameObject:
   - component: {fileID: 55310223}
   - component: {fileID: 55310224}
   m_Layer: 0
-  m_Name: FishSpawner1 (2)
+  m_Name: FishSpawner3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -469,7 +469,7 @@ GameObject:
   - component: {fileID: 431765022}
   - component: {fileID: 431765023}
   m_Layer: 0
-  m_Name: FishSpawner1 (2)
+  m_Name: FishSpawner3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

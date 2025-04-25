@@ -5,10 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="88e6e5ff-a98e-4457-b8f5-80931b0b567c" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Dots/Enemy/Components/DamageAnimation.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Dots/Enemy/Components/DamageAnimation.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Dots/Enemy/Systems/DamageAnimationSystem.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Dots/Enemy/Systems/DamageAnimationSystem.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.VampireSurvivors_IP/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.VampireSurvivors_IP/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Dots/dotsTest/EntitiesSubscene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Dots/dotsTest/EntitiesSubscene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Dots/Enemy/Components/EnemySpawnerAuthoring.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Dots/Enemy/Components/EnemySpawnerAuthoring.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Dots/Enemy/Systems/EnemySpawnerSystem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Dots/Enemy/Systems/EnemySpawnerSystem.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Dots/Attacks/Systems/ProjectileDamageSystem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Dots/Attacks/Systems/ProjectileDamageSystem.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

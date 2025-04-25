@@ -57,6 +57,16 @@ namespace Dots.Attacks.Systems
                             //ECB.RemoveComponent<MoveSpeed>(sortKey, enemyEntity);
                             //ECB.RemoveComponent<Health>(sortKey, enemyEntity);
                         }
+                        else
+                        {
+                            ECB.AddComponent(sortKey, enemyEntity, new DamageAnimation()
+                            {
+                                Duration = 0.4f,
+                                ShakeIntensity = 0.04f,
+                                ScaleFactor = 5.5f
+                            });
+
+                        }
 
                         damagedEntities.Entities.Add(enemyEntity);
                     }
