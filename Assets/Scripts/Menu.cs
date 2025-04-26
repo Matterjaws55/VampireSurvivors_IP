@@ -39,4 +39,9 @@ public class Menu : MonoBehaviour
         mainMenuParent.SetActive(true);
         mainCreditsParent.SetActive(false);
     }
+
+    public void GoToMainMenu()
+    {
+        GameManager.LoadLvl(2);
+    }
 }
