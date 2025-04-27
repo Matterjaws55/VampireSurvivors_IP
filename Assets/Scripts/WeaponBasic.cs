@@ -75,4 +75,9 @@ public class WeaponBasic : MonoBehaviour
         Vector2 randomCircle = Random.insideUnitCircle * radius;
         return new Vector3(randomCircle.x, 0, randomCircle.y) + transform.position;
     }
+
+    void OnDisable()
+    {
+        spawnedWeapon = null;
+    }
 }

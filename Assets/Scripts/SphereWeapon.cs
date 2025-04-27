@@ -80,4 +80,9 @@ public class SphereWeapon : MonoBehaviour
 
         Debug.Log($"Weapon upgraded! New active duration: {activeDuration}, New size: {transform.localScale}");
     }
+
+    void OnDestroy()
+    {
+        UpgradePickUp.OnUpgradePickedUp -= UpgradeWeapon;
+    }
 }

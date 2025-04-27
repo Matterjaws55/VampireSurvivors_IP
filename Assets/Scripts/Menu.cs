@@ -44,4 +44,9 @@ public class Menu : MonoBehaviour
     {
         GameManager.LoadLvl(2);
     }
+
+    public void GoToCharSelect()
+    {
+        GameManager.LoadLvl(0);
+    }
 }
