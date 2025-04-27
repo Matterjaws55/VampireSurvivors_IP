@@ -100,7 +100,7 @@ public class GameManager : MonoBehaviour
 
         catch (System.ArgumentException exception)
         {
-            LoadLvl(0);
+            LoadLvl(2);
             Debug.Log("Reverting to Main Menu" + exception.ToString());
         }
 
@@ -110,7 +110,7 @@ public class GameManager : MonoBehaviour
     {
         try
         {
-            LoadLvl(0);
+            LoadLvl(2);
             Debug.Log("Went to Main Menu");
         }
 
