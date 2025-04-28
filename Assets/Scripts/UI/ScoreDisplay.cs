@@ -22,13 +22,33 @@ namespace UI
         [SerializeField] private Image _scoreProgress;
 
         private float _scoreStart = 0;
-        
+
+        private bool _hasStarted = false;
+
+
         private void Update()
         {
             var world = World.DefaultGameObjectInjectionWorld;
             if (world == null) return;
 
             var scoreQuery = world.EntityManager.CreateEntityQuery(typeof(Score));
+
+            if (!_hasStarted)
+            {
+                if (scoreQuery.TryGetSingletonEntity<Score>(out var scoreEntity))
+                {
+                    if (world.EntityManager.HasComponent<Score>(scoreEntity))
+                    {
+                        var scoreComp = world.EntityManager.GetComponentData<Score>(scoreEntity);
+                        scoreComp.Value = 0;
+                    
+                        world.EntityManager.SetComponentData(scoreEntity, scoreComp);
+                        _hasStarted = true;
+                    }
+                }
+                return;
+            }
+            
             if (scoreQuery.TryGetSingleton<Score>(out var score))
             {
                 _scoreText.text = $"Score: {score.Value}";
