@@ -28,7 +28,7 @@ public class CharacterSelection : MonoBehaviour
 
     public void StartGame()
     {
-        PlayerPrefs.SetInt("selectedCharacter", selectedCharacter);
-        SceneManager.LoadScene(1, LoadSceneMode.Single);
+        PlayerPrefs.SetInt("SelectedCharacter", selectedCharacter);
+        SceneManager.LoadScene("dotsTest", LoadSceneMode.Single);
     }
 }

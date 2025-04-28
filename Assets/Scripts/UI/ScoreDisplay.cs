@@ -1,4 +1,5 @@
-﻿using Dots.Components;
+﻿using System;
+using Dots.Components;
 using TMPro;
 using Unity.Entities;
 using UnityEngine;
@@ -35,5 +36,7 @@ namespace UI
                 _currentUpgrade++;
             }
         }
+
+
     }
 }

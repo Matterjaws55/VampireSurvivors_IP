@@ -5,8 +5,22 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="88e6e5ff-a98e-4457-b8f5-80931b0b567c" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/UI/ResultsScreen.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/UI/ResultsScreen.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerBoatLoader.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerBoatLoader.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.VampireSurvivors_IP/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.VampireSurvivors_IP/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Character 3 Prefab.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Character 3 Prefab.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/DotsEnemies/QuickFish Variant.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/DotsEnemies/QuickFish Variant.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/CharacterSelect.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/CharacterSelect.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Dots/dotsTest.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Dots/dotsTest.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/MainMenu.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/MainMenu.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Results.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Results.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/CharacterSelection.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/CharacterSelection.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Menu.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Menu.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/ResultsDisplay.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/ResultsDisplay.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/ResultsScreen.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/ResultsScreen.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/ScoreDisplay.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/ScoreDisplay.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -93,13 +107,15 @@
       </option>
       <method v="2" />
     </configuration>
-    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
+    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" ignored-value-for-modified-check="71824">
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
-      <option name="pid" />
+      <option name="pid" value="71824" />
       <option name="projectPathOnTarget" />
       <option name="runtimes">
-        <list />
+        <list>
+          <MonoRuntime />
+        </list>
       </option>
       <option name="selectedOptions">
         <list />
@@ -116,7 +132,7 @@
       <option name="presentableId" value="Default" />
       <updated>1740020824365</updated>
       <workItem from="1745526598413" duration="19939000" />
-      <workItem from="1745844716096" duration="4816000" />
+      <workItem from="1745844716096" duration="7543000" />
     </task>
     <servers />
   </component>

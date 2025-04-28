@@ -1,6 +1,7 @@
 ﻿using System;
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 namespace UI
 {
@@ -21,6 +22,11 @@ namespace UI
             }
             
             _scoreText.text = $"SCORE: {lastScore}\nHIGH SCORE: {highScore}";
+        }
+
+        public void LoadMainMenu()
+        {
+            SceneManager.LoadScene("MainMenu");
         }
     }
 }

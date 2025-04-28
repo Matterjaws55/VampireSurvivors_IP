@@ -167,7 +167,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   prefab: {fileID: 4094521209202891302, guid: fdec1da815c57b0458f0f3afca1dad79, type: 3}
-  timeToUnlock: 60
+  timeToUnlock: 90
   spawnInterval: 0.5
   spawnRadius: 30
   player: {fileID: 1208864073}
@@ -216,7 +216,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   prefab: {fileID: 8891480255789051734, guid: 400465800e6ab0543879b9b81622c6b8, type: 3}
-  timeToUnlock: 40
+  timeToUnlock: 65
   spawnInterval: 3
   spawnRadius: 30
   player: {fileID: 1208864073}
@@ -349,7 +349,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   prefab: {fileID: 2218551776120270787, guid: 627988f16492cce40b9081a7fdd80fb6, type: 3}
-  timeToUnlock: 25
+  timeToUnlock: 60
   spawnInterval: 4
   spawnRadius: 30
   player: {fileID: 1208864073}
@@ -504,7 +504,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   prefab: {fileID: 2218551776120270787, guid: 627988f16492cce40b9081a7fdd80fb6, type: 3}
-  timeToUnlock: 45
+  timeToUnlock: 80
   spawnInterval: 3
   spawnRadius: 30
   player: {fileID: 1208864073}
@@ -1056,7 +1056,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   prefab: {fileID: 8891480255789051734, guid: 400465800e6ab0543879b9b81622c6b8, type: 3}
-  timeToUnlock: 15
+  timeToUnlock: 30
   spawnInterval: 4
   spawnRadius: 30
   player: {fileID: 1208864073}
@@ -1105,7 +1105,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   prefab: {fileID: 4094521209202891302, guid: fdec1da815c57b0458f0f3afca1dad79, type: 3}
-  timeToUnlock: 120
+  timeToUnlock: 140
   spawnInterval: 0.01
   spawnRadius: 30
   player: {fileID: 1208864073}
