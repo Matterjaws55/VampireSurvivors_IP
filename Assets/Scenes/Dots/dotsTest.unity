@@ -3354,9 +3354,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   numberOfBush: 200
   bushPrefabs:
-  - {fileID: 5787298779682872063, guid: f64027ece9e3148459ced9f0cf18a0be, type: 3}
-  - {fileID: 3117865610809464849, guid: 4f22cbc0f1a248f4ab00cedbe5e5580f, type: 3}
-  - {fileID: 3817870985608073961, guid: aa87f99f9d54cee4eb03f0ade15efcab, type: 3}
+  - {fileID: 4847709589536309598, guid: 880235adaf25ba6429049ffc70c699c5, type: 3}
+  - {fileID: 740260130502270610, guid: 8052bf6d2df1a1c47aa72aea18aabe11, type: 3}
+  - {fileID: 7269097493177910954, guid: 6bdc27707663dcc448d7d8f844082992, type: 3}
 --- !u!114 &1583609186
 MonoBehaviour:
   m_ObjectHideFlags: 0
