@@ -17,6 +17,14 @@ namespace UI
         [SerializeField] private Image _healthBar;
 
         public static float _maxHealth = 100;
+        
+        private AudioSource _audioSource;
+
+        private void Awake()
+        {
+            _audioSource = GetComponent<AudioSource>();
+        }
+
         private void Update()
         {
             var world = World.DefaultGameObjectInjectionWorld;
@@ -31,6 +39,13 @@ namespace UI
                 {
                     _cinemachineImpulse.GenerateImpulseWithForce(1);
                 }
+
+                if (newHealth != _healthBar.fillAmount && _audioSource)
+                {
+                    _audioSource.Play();
+                }
+
+                
                 _healthBar.fillAmount = newHealth;
                 
                 if(!_dead && health.Value <= 0)
