@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 4067749627138833986}
   - component: {fileID: 6411176151088904384}
   - component: {fileID: 8986712202210591020}
+  - component: {fileID: -3194513713124000798}
   m_Layer: 0
   m_Name: FishingRodAttack
   m_TagString: Untagged
@@ -157,6 +158,18 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &-3194513713124000798
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 161164725431970023}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d3a6ba3f5b4be064fa35ae2fadf132dc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &3301204176353815114
 GameObject:
   m_ObjectHideFlags: 0
