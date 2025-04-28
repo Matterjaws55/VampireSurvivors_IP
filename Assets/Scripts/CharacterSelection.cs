@@ -45,7 +45,7 @@ public class CharacterSelection : MonoBehaviour
 
     private void UpdateUnlockText()
     {
-        if (_highScore > scoreCounts[selectedCharacter])
+        if (_highScore >= scoreCounts[selectedCharacter])
         {
             _scoreUnlockText.enabled = false;
             _startButton.interactable = true;
