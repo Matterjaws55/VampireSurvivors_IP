@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 4686371406718184089}
   - component: {fileID: 7480825627747248137}
   - component: {fileID: 323211002810517382}
+  - component: {fileID: 7385682024903146329}
   m_Layer: 0
   m_Name: Enemy
   m_TagString: Untagged
@@ -102,7 +103,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2f28e516b0e17394f844315206117217, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Health: 10
+  Health: 5
+  ScoreOnDeath: 100
 --- !u!114 &7480825627747248137
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -136,6 +138,19 @@ SphereCollider:
   serializedVersion: 3
   m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &7385682024903146329
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4094521209202891302}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4f32ee2b045a4c18a074710c6d5f1d25, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Damage: 2
 --- !u!1 &6161922055923016098
 GameObject:
   m_ObjectHideFlags: 0
