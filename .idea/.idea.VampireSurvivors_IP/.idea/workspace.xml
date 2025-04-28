@@ -5,13 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="88e6e5ff-a98e-4457-b8f5-80931b0b567c" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Dots/Enemy/Components/DamageAnimation.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Dots/Enemy/Components/DamageAnimation.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Dots/Enemy/Systems/DamageAnimationSystem.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Dots/Enemy/Systems/DamageAnimationSystem.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Player/Attacks/NetAttack.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Player/Attacks/NetAttack.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.VampireSurvivors_IP/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.VampireSurvivors_IP/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Dots/dotsTest/EntitiesSubscene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Dots/dotsTest/EntitiesSubscene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Dots/Attacks/Systems/ProjectileDamageSystem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Dots/Attacks/Systems/ProjectileDamageSystem.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Dots/dotsTest.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Dots/dotsTest.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Utility/Lifetime.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Utility/Lifetime.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/Packages/com.unity.probuilder/Settings.json" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/Packages/com.unity.probuilder/Settings.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -37,10 +37,10 @@
   }
 }</component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/c0b7b90d34a54066a7234dad6925511646ac00/19/18e32578/Buffer.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/c0b7b90d34a54066a7234dad6925511646ac00/30/1b6fb374/String.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/c0b7b90d34a54066a7234dad6925511646ac00/ab/ab9b2696/IntPtr.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Dots/Attacks/Systems/ProjectileDamageSystem.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/UI/ScoreDisplay.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.entities@1.3.10/Unity.Entities/EntityManager.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
@@ -98,15 +98,13 @@
       </option>
       <method v="2" />
     </configuration>
-    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" ignored-value-for-modified-check="3400">
+    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
-      <option name="pid" value="3400" />
+      <option name="pid" />
       <option name="projectPathOnTarget" />
       <option name="runtimes">
-        <list>
-          <MonoRuntime />
-        </list>
+        <list />
       </option>
       <option name="selectedOptions">
         <list />
@@ -123,6 +121,7 @@
       <option name="presentableId" value="Default" />
       <updated>1740020824365</updated>
       <workItem from="1745526598413" duration="19939000" />
+      <workItem from="1745844716096" duration="1009000" />
     </task>
     <servers />
   </component>

@@ -475,6 +475,8 @@ MonoBehaviour:
     AttackStats: {fileID: 11400000, guid: c7243f85e2e0dbb45a9e8fdd93bb40ad, type: 2}
   - TimeSinceLastAttack: 0
     AttackStats: {fileID: 11400000, guid: 03568c334e3890546baa35ae11f87095, type: 2}
+  - TimeSinceLastAttack: 0
+    AttackStats: {fileID: 11400000, guid: 41bee0f3caa82c345aded0e3a12c59d4, type: 2}
 --- !u!1 &758109546
 GameObject:
   m_ObjectHideFlags: 3
@@ -1248,8 +1250,8 @@ GameObject:
   - component: {fileID: 2083186759}
   - component: {fileID: 2083186760}
   m_Layer: 0
-  m_Name: Art
-  m_TagString: Untagged
+  m_Name: PlayerArt
+  m_TagString: PlayerArt
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
