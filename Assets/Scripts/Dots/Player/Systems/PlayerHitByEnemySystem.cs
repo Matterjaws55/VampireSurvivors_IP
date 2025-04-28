@@ -34,8 +34,6 @@ namespace Dots.Player.Systems
                     if (math.distance(playerPosition, enemyPosition) <= damageRadius)
                     {
                         health.ValueRW.Value -= enemyDamage.ValueRO.Value;
-                        UnityEngine.Debug.Log($"Player hit! Health: {health.ValueRW.Value}");
-
                         health.ValueRW._safeTime = 0.5f;
                         break;
                     }
