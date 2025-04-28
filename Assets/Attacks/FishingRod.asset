@@ -14,4 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ProjectilePrefab: {fileID: 4067749627138833986, guid: 35b1d0f11c29a45449d430f212711ba0,
     type: 3}
-  FireCooldown: 2
+  FireCooldown: 1

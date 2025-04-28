@@ -5,19 +5,21 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="88e6e5ff-a98e-4457-b8f5-80931b0b567c" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Dots/Enemy/Components/DamageAmountAuthoring.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Dots/Enemy/Components/DamageAmountAuthoring.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Dots/Player/Components/PlayerHealth.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Dots/Player/Components/PlayerHealth.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Dots/Player/Components/PlayerHealthAuthoring.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Dots/Player/Components/PlayerHealthAuthoring.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Dots/Player/Systems/PlayerHitByEnemySystem.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Dots/Player/Systems/PlayerHitByEnemySystem.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Player/UpgradeManager.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Player/UpgradeManager.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/UI/HealthDisplay.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/UI/HealthDisplay.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.VampireSurvivors_IP/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.VampireSurvivors_IP/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/DotsEnemies/Enemy.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/DotsEnemies/Enemy.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/DotsEnemies/QuickFish Variant.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/DotsEnemies/QuickFish Variant.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/DotsEnemies/Shark Variant.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/DotsEnemies/Shark Variant.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Attacks/FishingRod.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Attacks/FishingRod.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Attacks/Harpoon.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Attacks/Harpoon.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Dots/dotsTest.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Dots/dotsTest.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Dots/dotsTest/EntitiesSubscene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Dots/dotsTest/EntitiesSubscene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/StartingLevel.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/StartingLevel.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Dots/Player/Systems/PlayerMovementSystem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Dots/Player/Systems/PlayerMovementSystem.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerAttackManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerAttackManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/RandomEnvironment.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/RandomEnvironment.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/ScoreDisplay.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/ScoreDisplay.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/UpgradeMenu.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/UpgradeMenu.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -127,7 +129,7 @@
       <option name="presentableId" value="Default" />
       <updated>1740020824365</updated>
       <workItem from="1745526598413" duration="19939000" />
-      <workItem from="1745844716096" duration="2301000" />
+      <workItem from="1745844716096" duration="4519000" />
     </task>
     <servers />
   </component>

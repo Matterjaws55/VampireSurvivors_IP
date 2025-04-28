@@ -6,6 +6,7 @@ using Unity.Burst;
 using Unity.Entities;
 using Unity.Mathematics;
 using Unity.Transforms;
+using UnityEngine;
 
 namespace Dots.Player.Systems
 {
@@ -28,7 +29,14 @@ namespace Dots.Player.Systems
                 moveDelta *= speed;
                 moveDelta *= SystemAPI.Time.DeltaTime;
 
-                transform.ValueRW.Position += moveDelta;
+                
+                float3 pos = transform.ValueRO.Position + moveDelta;
+
+                pos.x = Mathf.Clamp(pos.x, -160, 160);
+                pos.z = Mathf.Clamp(pos.z, -160, 160);
+                
+                transform.ValueRW.Position = pos;
+
             }
         }
 

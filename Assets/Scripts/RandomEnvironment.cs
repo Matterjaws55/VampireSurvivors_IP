@@ -39,6 +39,7 @@ public class RandomEnvironment : MonoBehaviour
     private void SpawnBushes()
     {
         GameObject bushParent = new GameObject("Bushes");
+        
 
         for (int i = 0; i < numberOfBush; i++)
         {
@@ -58,5 +59,7 @@ public class RandomEnvironment : MonoBehaviour
             float y = Random.Range(0.8f, 1.5f);
             bushInstance.transform.localScale = new Vector3(xz, y, xz);
         }
+        
+        bushParent.transform.position = new Vector3(0, 4.15f, 0);
     }
 }
